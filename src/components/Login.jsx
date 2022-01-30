@@ -38,13 +38,15 @@ const Login = () => {
     return (
         <>
         <div className="p-4 box">
-          <h2 className="mb-3">Cryptomate Login</h2>
+          <h2 className="mb-3 login-title">Cryptomate Login</h2>
+          <p>Provide Your Valid Email and Password To Login</p>
           {error && <Alert variant="danger">{error}</Alert>}
           <Form onSubmit={handleSubmit}>
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Control
                 type="email"
-                placeholder="Email address"
+                placeholder="Email Id"
+                className='input'
                 onChange={(e) => setEmail(e.target.value)}
               />
             </Form.Group>
@@ -53,12 +55,13 @@ const Login = () => {
               <Form.Control
                 type="password"
                 placeholder="Password"
+                className='input'
                 onChange={(e) => setPassword(e.target.value)}
               />
             </Form.Group>
   
             <div className="d-grid gap-2">
-              <Button variant="primary" type="Submit">
+              <Button variant="primary" className='button' type="Submit">
                 Log In
               </Button>
             </div>
@@ -70,10 +73,8 @@ const Login = () => {
               type="dark"
               onClick={handleGoogleSignIn}
             />
+            <footer>Don't have an account? <Link to="/signup">Sign up</Link></footer>
           </div>
-        </div>
-        <div className="p-4 box mt-3 text-center">
-          Don't have an account? <Link to="/signup">Sign up</Link>
         </div>
       </>
     )
