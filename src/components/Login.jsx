@@ -50,7 +50,7 @@ const Login = () => {
                 onChange={(e) => setEmail(e.target.value)}
               />
             </Form.Group>
-  
+      
             <Form.Group className="mb-3" controlId="formBasicPassword">
               <Form.Control
                 type="password"
@@ -73,6 +73,7 @@ const Login = () => {
               type="dark"
               onClick={handleGoogleSignIn}
             />
+            <footer>Don't have an email? <Link to="/Login/mobile">Login with Mobile</Link></footer>
             <footer>Don't have an account? <Link to="/signup">Sign up</Link></footer>
           </div>
         </div>
